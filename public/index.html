@@ -14,8 +14,15 @@
   <!-- JS Dependencies -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="ace-builds/src-min-noconflict/ace.js"></script>
+
+
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+
+  <!-- adding ui-ace js file for the in browser text editor. -->
+  <script type="text/javascript" src="app/ui-ace.js"></script>
 
   <!-- Main App Entry -->
   <script src="app/app.js"></script>
@@ -30,7 +37,27 @@
   <!-- Services -->
   <script src="app/services/my-services.js"></script>
 </head>
-<body ng-app="myApp">
+<body ng-app="myApp" ng-controller="IndexCtrl">
   <div ui-view></div>
+  <div class="col-xs-5" ng-model="code" ui-ace="{
+  useWrapMode : true,
+  showGutter: false,
+  theme:'monokai',
+  mode: 'javascript',
+  firstLineNumber: 5,
+  onLoad: aceLoaded,
+  onChange: aceChanged
+}"></div>
+  <div class="col-xs-5 question">
+    
+  </div>
+  <div class="col-xs-5 res">
+    <h2 ng-class="{ 'text-success': res.data.total, 'text-danger': !res.data.add }">{{res.data.addMessage}}</h2>
+    <h2 ng-class="{ 'text-success': res.data.total, 'text-danger': !res.data.type }">{{res.data.typeMessage}}</h2>
+  </div>
+  <div class="buttonDiv">
+    <button class="btn btn-success" ng-click="testCode(code)">Test Code</button>
+    <button class="btn btn-warning" ng-show="res.data.total">Next Question</button>
+  </div>
 </body>
 </html>

@@ -1,9 +1,36 @@
-#editor {
-  margin-top: 200px;
+/*#editor {
+  margin-top: 100px;
   position: absolute;
-  top: 50px;
-  right: 50px;
+  top: 0px;
+  right: 1050px;
   bottom: 50px;
   left: 50px;
-  border: solid blue 5px; 
-}
+  border: solid black 5px; 
+}*/
+
+.ace_editor { 
+  margin-left: 10px;
+  height: 800px;
+  width: 500px;
+  border: solid black 2px;
+ }
+
+ .res {
+  height: 500px;
+  width: 500px;
+  background-color: #272822;
+  border: solid black 2px;
+  color: green;
+ }
+
+ .question {
+  height: 300px;
+  width: 500px;
+  background-color: #272822;
+  border: solid black 2px;
+  color: yellow;
+ }
+
+ .buttonDiv {
+  margin-left: 10px;
+ }
