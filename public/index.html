@@ -49,7 +49,8 @@
   onChange: aceChanged
 }"></div>
   <div class="col-xs-5 question">
-    
+    <h2>{{prompt[0].title}}</h2>
+    <h4>{{prompt[0].prompt}}</h4>
   </div>
   <div class="col-xs-5 res">
     <h2 ng-class="{ 'text-success': res.data.total, 'text-danger': !res.data.add }">{{res.data.addMessage}}</h2>

@@ -15,6 +15,14 @@ angular.module('myApp', ['MyCtrls', 'MyFactories', 'MyServices', 'ui.router', 'u
   $scope.aceLoaded = function(_editor) {
     // Options
     console.log("loaded");
+    $http.get('/api').then(function success(res){
+      console.log("http success: ", res);
+      console.log(res.data);
+      $scope.prompt = res.data;
+
+    }, function error(res){
+      console.log("http error: ", res);
+    })
   };
 
   $scope.aceChanged = function(e) {
@@ -27,7 +35,9 @@ angular.module('myApp', ['MyCtrls', 'MyFactories', 'MyServices', 'ui.router', 'u
     // because angular http wants to send JSON I had to wrap the gathered
     // code from the editor in an object to send it.
     var sendObj = {};
-    sendObj.code = code;                   
+    console.log("prompt: ", $scope.prompt);
+    sendObj.code = code;
+    sendObj.test = $scope.prompt[0].test;                   
     $http.post('/api', sendObj).then(function success(res){
       console.log("success:", res);
       $scope.res = res;

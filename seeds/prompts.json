@@ -1,0 +1,9 @@
+[  
+  {
+    "title": "Add Function",
+    "prompt": "Write a function that takes two parameters and returns the sum of the two parameters.",
+    "test": "addFunction",
+    "category": "functional",
+    "difficulty": "easy"
+  }
+]

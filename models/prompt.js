@@ -8,4 +8,4 @@ var promptSchema = new mongoose.Schema({
   difficulty: String
 });
 
-module.exports = mongoose.model('PromptModel', promptSchema);
+module.exports = mongoose.model('prompts', promptSchema);

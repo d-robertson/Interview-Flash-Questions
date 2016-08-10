@@ -6,7 +6,7 @@
  }
 
  .res {
-  height: 500px;
+  height: 300px;
   width: 500px;
   background-color: #272822;
   border: solid black 2px;
@@ -14,7 +14,7 @@
  }
 
  .question {
-  height: 300px;
+  height: 500px;
   width: 500px;
   background-color: #272822;
   border: solid black 2px;
