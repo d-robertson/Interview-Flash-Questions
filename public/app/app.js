@@ -15,10 +15,19 @@ angular.module('myApp', ['MyCtrls', 'MyFactories', 'MyServices', 'ui.router', 'u
   $scope.aceLoaded = function(_editor) {
     // Options
     console.log("loaded");
+
+    // $scope.code = "// write your code below this line."
+
+    var _renderer = _editor.renderer;
+    _renderer.setShowGutter(true);
+
+
+
     $http.get('/api').then(function success(res){
       console.log("http success: ", res);
       console.log(res.data);
       $scope.prompt = res.data;
+      $scope.code = $scope.prompt[0].editorLoadText;
 
     }, function error(res){
       console.log("http error: ", res);

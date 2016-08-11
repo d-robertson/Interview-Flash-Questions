@@ -44,17 +44,17 @@
   showGutter: false,
   theme:'monokai',
   mode: 'javascript',
-  firstLineNumber: 5,
+  firstLineNumber: 1,
   onLoad: aceLoaded,
   onChange: aceChanged
 }"></div>
   <div class="col-xs-5 question">
     <h2>{{prompt[0].title}}</h2>
+    <h4>{{prompt[0].description}}</h4>
     <h4>{{prompt[0].prompt}}</h4>
   </div>
   <div class="col-xs-5 res">
-    <h2 ng-class="{ 'text-success': res.data.total, 'text-danger': !res.data.add }">{{res.data.addMessage}}</h2>
-    <h2 ng-class="{ 'text-success': res.data.total, 'text-danger': !res.data.type }">{{res.data.typeMessage}}</h2>
+    <h2 ng-repeat="message in res.data.messages track by $index" ng-class="{'text-success': message.passed, 'text-danger': !message.passed }">{{message.message}}</h2>
   </div>
   <div class="buttonDiv">
     <button class="btn btn-success" ng-click="testCode(code)">Test Code</button>

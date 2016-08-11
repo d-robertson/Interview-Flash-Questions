@@ -19,7 +19,7 @@ router.route('/')
 .post(function(req, res) {
   console.log('Hit post route', req.body);
   myTests[req.body.test](req.body);
-  res.send(myTests.addFunction(req.body));
+  res.send(myTests[req.body.test](req.body));
 
 });
 

@@ -5,7 +5,10 @@ var promptSchema = new mongoose.Schema({
   prompt: String,
   test: String,
   category: String,
-  difficulty: String
+  difficulty: String,
+  editorLoadText: String,
+  exampleInput: String,
+  exampleOutput: String
 });
 
 module.exports = mongoose.model('prompts', promptSchema);

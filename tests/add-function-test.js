@@ -1,4 +1,3 @@
-var assert = require('assert');
 function addFunctionTest(code){
   console.log('addFunctionTest hit');
   var code = code.code;
