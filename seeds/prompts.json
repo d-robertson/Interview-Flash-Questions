@@ -9,5 +9,16 @@
     "exampleInput": "anna",
     "exampleOutput": "true",
     "prompt": "write a function named 'isPalindrome' and have it except a string. Have your function return true if the string is a palindrome and false if not."
+  },
+  {
+    "title": "Reverse String",
+    "description": "A function that takes a string input and reverses it.",
+    "test": "reverseStringFunction",
+    "category": "functional",
+    "difficulty": "easy",
+    "editorLoadText": "function FirstReverse(str){// write your code in the editor here}",
+    "exampleInput": "I Love Code",
+    "exampleOutput": "edoC evoL I",
+    "prompt": "Using the JavaScript language, have the function FirstReverse(str) take the str parameter being passed and return the string in reversed order."
   }
 ]

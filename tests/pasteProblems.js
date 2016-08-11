@@ -12,3 +12,13 @@
 // add(2)(3);
 // add(8, 0);
 //--------------------------------------
+
+
+// function printStuff(arr) {
+//   console.log(arguments);
+//   arr.forEach(function(item){
+//     console.log(item);
+//   });
+// }
+
+// printStuff([1, 2, 3], 'taco');
