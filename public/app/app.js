@@ -61,5 +61,6 @@ angular.module('myApp', ['MyCtrls', 'MyFactories', 'MyServices', 'ui.router', 'u
     $scope.prompt = $scope.resData[num];
     $scope.code = $scope.prompt.editorLoadText;
     $scope.res.data.messages = [];
+    $scope.res.data.total = false;
   }
 }]);

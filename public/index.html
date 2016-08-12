@@ -5,10 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <base href="/">
-  <title>MEAN Boilerplate</title>
+  <title>Code Challenges</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="stylesheets/main.css">
 
   <!-- JS Dependencies -->
@@ -38,27 +39,34 @@
   <script src="app/services/my-services.js"></script>
 </head>
 <body ng-app="myApp" ng-controller="IndexCtrl">
-  <div ui-view></div>
-  <div class="col-xs-5" ng-model="code" ui-ace="{
-  useWrapMode : true,
-  showGutter: false,
-  theme:'monokai',
-  mode: 'javascript',
-  firstLineNumber: 1,
-  onLoad: aceLoaded,
-  onChange: aceChanged
-}"></div>
-  <div class="col-xs-5 question">
-    <h2>{{prompt.title}}</h2>
-    <h4>{{prompt.description}}</h4>
-    <h4>{{prompt.prompt}}</h4>
+  <div class="container main">
+    <div class="">
+      <div ui-view></div>
+      <div class="col-xs-5" ng-model="code" ui-ace="{
+      useWrapMode : true,
+      showGutter: false,
+      theme:'monokai',
+      mode: 'javascript',
+      firstLineNumber: 1,
+      onLoad: aceLoaded,
+      onChange: aceChanged
+    }"></div>
+      <div class="col-xs-5 question">
+        <h2>{{prompt.title}}</h2>
+        <h4>{{prompt.description}}</h4>
+        <h4>{{prompt.prompt}}</h4>
+      </div>
+      <div class="col-xs-5 res">
+        <h2 ng-repeat="message in res.data.messages track by $index" ng-class="{'text-success': message.passed, 'text-danger': !message.passed }">{{message.message}}</h2>
+      </div>
+      <div class="buttonDiv">
+        <button class="btn btn-success" ng-click="testCode(code)">Test Code</button>
+        <button class="btn btn-warning" ng-show="res.data.total" ng-click="nextPrompt()">Next Question</button>
+      </div>
+    </div>
   </div>
-  <div class="col-xs-5 res">
-    <h2 ng-repeat="message in res.data.messages track by $index" ng-class="{'text-success': message.passed, 'text-danger': !message.passed }">{{message.message}}</h2>
-  </div>
-  <div class="buttonDiv">
-    <button class="btn btn-success" ng-click="testCode(code)">Test Code</button>
-    <button class="btn btn-warning" ng-show="res.data.total" ng-click="nextPrompt()">Next Question</button>
+  <div class="footer container">
+    <footer>DerekAcademy 2016</footer>
   </div>
 </body>
 </html>

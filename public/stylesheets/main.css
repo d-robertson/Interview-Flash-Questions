@@ -11,6 +11,7 @@
   background-color: #272822;
   border: solid black 2px;
   color: green;
+  font-family: 'Roboto', sans-serif;
  }
 
  .question {
@@ -19,8 +20,64 @@
   background-color: #272822;
   border: solid black 2px;
   color: yellow;
+  font-family: 'Roboto', sans-serif;
  }
 
  .buttonDiv {
   margin-left: 10px;
  }
+
+ i {
+  color: gray;
+  font-family: 'Roboto', sans-serif;
+ }
+
+ strong {
+  color: salmon;
+  font-family: 'Roboto', sans-serif;
+ }
+
+ small {
+  float: right;
+  margin-right: 50px;
+  font-family: 'Roboto', sans-serif;
+ }
+
+ h1 {
+  margin-left: 10px;
+
+
+ }
+
+ .btn {
+  border-radius: 0px;
+  width: 115px;
+ }
+
+ footer {
+  margin-left: 10px;
+  margin-top: 30px;
+ 
+  color: white;
+ }
+
+ .footer {
+  height: 85px;
+  background-color: #272822;
+ }
+
+ .main {
+  background-color: #272822;
+ }
+
+ body {
+  background-color: #92cdcf;
+ }
+
+.text-success {
+  color: #00ff00;
+}
+
+.text-danger {
+  color: #ff0000;
+}

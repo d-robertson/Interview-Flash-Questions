@@ -50,6 +50,8 @@ function longestWordFunction(code){
     testObj.total = true;
   }
 
+  return testObj;
+
 }
 
 module.exports = longestWordFunction;

@@ -48,6 +48,8 @@ function firstFactorialFunction(code){
   if(testObj.messages[1].passed === true && testObj.messages[0].passed === true){
     testObj.total = true;
   }
+
+  return testObj;
 }
 
 module.exports = firstFactorialFunction;
