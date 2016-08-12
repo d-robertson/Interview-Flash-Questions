@@ -1,5 +1,5 @@
 {
 	"undefined": "localhost/interview",
 	"dev": "localhost/interview",
-	"prod": process.env.MONGODB_URI
+	"prod": "localhost/interview"
 }
