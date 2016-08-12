@@ -9,17 +9,6 @@
     "exampleInput": "anna",
     "exampleOutput": "true",
     "prompt": "write a function named 'isPalindrome' and have it except a string. Have your function return true if the string is a palindrome and false if not."
-  },
-  {
-    "title": "Reverse String",
-    "description": "A function that takes a string input and reverses it.",
-    "test": "reverseStringFunction",
-    "category": "functional",
-    "difficulty": "easy",
-    "editorLoadText": "function FirstReverse(str){ }",
-    "exampleInput": "I Love Code",
-    "exampleOutput": "edoC evoL I",
-    "prompt": "Using the JavaScript language, have the function FirstReverse(str) take the str parameter being passed and return the string in reversed order."
   }, 
   {
     "title": "First Factorial",
@@ -53,5 +42,16 @@
     "exampleInput": "hello*3",
     "exampleOutput": "Ifmmp*3",
     "prompt": "Using the JavaScript language, have the function LetterChanges(str) take the str parameter being passed and modify it using the following algorithm. Replace every letter in the string with the letter following it in the alphabet (ie. c becomes d, z becomes a). Then capitalize every vowel in this new string (a, e, i, o, u) and finally return this modified string."
+  },
+  {
+    "title": "Reverse String",
+    "description": "A function that takes a string input and reverses it.",
+    "test": "reverseStringFunction",
+    "category": "functional",
+    "difficulty": "easy",
+    "editorLoadText": "function FirstReverse(str){ }",
+    "exampleInput": "I Love Code",
+    "exampleOutput": "edoC evoL I",
+    "prompt": "Using the JavaScript language, have the function FirstReverse(str) take the str parameter being passed and return the string in reversed order."
   }
 ]
