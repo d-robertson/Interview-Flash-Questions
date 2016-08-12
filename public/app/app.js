@@ -12,6 +12,7 @@ angular.module('myApp', ['MyCtrls', 'MyFactories', 'MyServices', 'ui.router', 'u
   $locationProvider.html5Mode(true);
 })
 .controller('IndexCtrl', ['$scope', '$http', function($scope, $http){
+  var num = 0;
   $scope.aceLoaded = function(_editor) {
     // Options
     console.log("loaded");
@@ -21,13 +22,12 @@ angular.module('myApp', ['MyCtrls', 'MyFactories', 'MyServices', 'ui.router', 'u
     var _renderer = _editor.renderer;
     _renderer.setShowGutter(true);
 
-
-
     $http.get('/api').then(function success(res){
       console.log("http success: ", res);
       console.log(res.data);
-      $scope.prompt = res.data;
-      $scope.code = $scope.prompt[0].editorLoadText;
+      $scope.resData = res.data;
+      $scope.prompt = $scope.resData[num];
+      $scope.code = $scope.prompt.editorLoadText;
 
     }, function error(res){
       console.log("http error: ", res);
@@ -46,12 +46,20 @@ angular.module('myApp', ['MyCtrls', 'MyFactories', 'MyServices', 'ui.router', 'u
     var sendObj = {};
     console.log("prompt: ", $scope.prompt);
     sendObj.code = code;
-    sendObj.test = $scope.prompt[0].test;                   
+    sendObj.test = $scope.prompt.test;                   
     $http.post('/api', sendObj).then(function success(res){
       console.log("success:", res);
       $scope.res = res;
     }, function error(res){
       console.log("error:", res);
     });
+  }
+
+
+  $scope.nextPrompt = function(){
+    num +=1;
+    $scope.prompt = $scope.resData[num];
+    $scope.code = $scope.prompt.editorLoadText;
+    $scope.res.data.messages = [];
   }
 }]);

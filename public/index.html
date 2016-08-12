@@ -49,16 +49,16 @@
   onChange: aceChanged
 }"></div>
   <div class="col-xs-5 question">
-    <h2>{{prompt[0].title}}</h2>
-    <h4>{{prompt[0].description}}</h4>
-    <h4>{{prompt[0].prompt}}</h4>
+    <h2>{{prompt.title}}</h2>
+    <h4>{{prompt.description}}</h4>
+    <h4>{{prompt.prompt}}</h4>
   </div>
   <div class="col-xs-5 res">
     <h2 ng-repeat="message in res.data.messages track by $index" ng-class="{'text-success': message.passed, 'text-danger': !message.passed }">{{message.message}}</h2>
   </div>
   <div class="buttonDiv">
     <button class="btn btn-success" ng-click="testCode(code)">Test Code</button>
-    <button class="btn btn-warning" ng-show="res.data.total">Next Question</button>
+    <button class="btn btn-warning" ng-show="res.data.total" ng-click="nextPrompt()">Next Question</button>
   </div>
 </body>
 </html>

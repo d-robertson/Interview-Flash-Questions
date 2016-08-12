@@ -5,7 +5,7 @@
     "test": "isPalindromeFunction",
     "category": "functional",
     "difficulty": "easy",
-    "editorLoadText": "// write your code in the editor here",
+    "editorLoadText": "function isPalindrome(string){ }",
     "exampleInput": "anna",
     "exampleOutput": "true",
     "prompt": "write a function named 'isPalindrome' and have it except a string. Have your function return true if the string is a palindrome and false if not."
@@ -16,9 +16,42 @@
     "test": "reverseStringFunction",
     "category": "functional",
     "difficulty": "easy",
-    "editorLoadText": "function FirstReverse(str){// write your code in the editor here}",
+    "editorLoadText": "function FirstReverse(str){ }",
     "exampleInput": "I Love Code",
     "exampleOutput": "edoC evoL I",
     "prompt": "Using the JavaScript language, have the function FirstReverse(str) take the str parameter being passed and return the string in reversed order."
+  }, 
+  {
+    "title": "First Factorial",
+    "description": "For this challenge you will be determining the factorial for a given number.",
+    "test": "firstFactorialFunction",
+    "category": "functional",
+    "difficulty": "easy",
+    "editorLoadText": "function FirstFactorial(num) { }",
+    "exampleInput": "4",
+    "exampleOutput": "24",
+    "prompt": "Using the JavaScript language, have the function FirstFactorial(num) take the num parameter being passed and return the factorial of it (e.g. if num = 4, return (4 * 3 * 2 * 1)). For the test cases, the range will be between 1 and 18."
+  },
+  {
+    "title": "Longest Word",
+    "description": "For this challenge you will be determining the largest word in a string.",
+    "test": "longestWordFunction",
+    "category": "functional",
+    "difficulty": "easy",
+    "editorLoadText": "function LongestWord(sen) { }",
+    "exampleInput": "fun&!! time",
+    "exampleOutput": "time",
+    "prompt": "Using the JavaScript language, have the function LongestWord(sen) take the sen parameter being passed and return the largest word in the string. If there are two or more words that are the same length, return the first word from the string with that length. Ignore punctuation and assume sen will not be empty."
+  },
+  {
+    "title": "Letter Changes",
+    "description": "For this challenge you will be manipulating characters in a string based off their positions in the alphabet.",
+    "test": "letterChangesFunction",
+    "category": "functional",
+    "difficulty": "easy",
+    "editorLoadText": "function LetterChanges(str) { }",
+    "exampleInput": "hello*3",
+    "exampleOutput": "Ifmmp*3",
+    "prompt": "Using the JavaScript language, have the function LetterChanges(str) take the str parameter being passed and modify it using the following algorithm. Replace every letter in the string with the letter following it in the alphabet (ie. c becomes d, z becomes a). Then capitalize every vowel in this new string (a, e, i, o, u) and finally return this modified string."
   }
 ]
